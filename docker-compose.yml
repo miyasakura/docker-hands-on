@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app1:
+    image: docker-hands-on-app1:latest
+
+  app2:
+    image: docker-hands-on-app2:latest
+    ports:
+      - 4567:4567
