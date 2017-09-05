@@ -1,0 +1,16 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: hands-on-app1-deployment
+spec:
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: hands-on-app1
+    spec:
+      containers:
+      - name: app1
+        image: miyasakura/docker-hands-on-app1:latest
+        ports:
+        - containerPort: 4567
